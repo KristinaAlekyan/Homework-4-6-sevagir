@@ -1,0 +1,32 @@
+﻿<html>
+<head>
+</head>
+<body>
+<script>
+
+/*1. Given an array of integers, find the pair of adjacent elements that has the largest product
+and return that product.*/
+
+let arr=[2,1,5,4,1,11];
+	let multArNextEl=arr.map(function(element, index){
+	return element*arr[index+1];
+	});
+    multArNextEl.pop();
+
+multArNextEl.sort(function(a,b){
+
+if(a>b) return 1;
+
+else return -1; 
+
+
+})
+
+let max = Math.max(...multArNextEl);
+
+console.log(max);
+
+
+</script>    
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿<html>
+<head>
+</head>
+<body>
+<script>
+
+
+/*5. Create a function that builds a tree like object given an array with object which contains
+parent and id properties.*/
+
+
+let treeNodes=[
+	{parent: null, id:0},
+	{parent: 0, id:1},
+	{parent: 0, id:2},
+	{parent: 1, id:3},
+	{parent: 1, id:4},
+	{parent: 2, id:5},
+	{parent: 4, id:6},
+]
+
+
+function make_array_of_tree_node(tree_node)
+{
+   for (let i = 0; i < tree_node.childCount; i ++) {
+ 
+     let node = tree_node_node.getChild(i);
+ 
+     if (node.type ==0) {
+         // Here I'd like to put a link (node.title) in an array as an element
+      } 
+	else if (node.type ==6) {
+         // Here the element is a folder so a I need to browse it
+         
+make_array_of_tree_node(node)
+ 
+     }
+
+   }
+}
+
+// Some code
+console.loge(make_array_of_tree_node(treeNodes));
+// Here I'd like to have access to the array containing all the elements node.title
+
+</script>    
+</body>
+</html>
